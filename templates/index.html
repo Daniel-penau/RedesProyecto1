@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../static/main.css"/>
+  <title>Proyecto 1 | Redes</title>
+</head>
+<body>
+  <div id="main-conteiner">
+    <header>
+      <div id="top" class="banner">
+        <h1 class="Title"><img src="../static/img/logo.png" alt="logo">Proyecto 1 | Redes</h1>
+      </div>
+    </header>
+        <ul class="sidenav">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      <main>
+        <div class="content">
+          <h2>Convertir archivos A/V</h2>
+          <p>Este sitio te permite realizar diferentes acciones relacionadas con los archivos de video, audio e imagen</p>
+          <div class="action">
+            <div class="actionform">
+              <h2>Convertir imagenes a video</h2>
+              <form action="#Convertir">
+                <label for="images_to_video">Seleccione las imagenes:</label>
+                <input type="file" id="images_to_video" name="images_to_video" multiple><br><br>
+              </form>
+                <button onclick="imagesToVideo()">Covertir</button>
+            </div>
+            <div class="actionform">
+              <h2>Extraer audio de video</h2>
+              <form action="#Extraer">
+                <label for="video_to_audio">Seleccione el video</label>
+                <input type="file" id="video_to_audio" name="video_audio"><br><br>
+
+              </form>
+                <button onclick="extractAudio()">Convertir</button>
+            </div>
+            <div class="actionform">
+              <h2>Cambiar el tamaño de un video</h2>
+              <form action="#Resize">
+                  <label for="video_resize">Seleccione el video</label>
+                  <input type="file" id="video_resize" name="video_resize">
+                  <label for="video_width">Ingrese el ancho</label>
+                  <input type="number" id="video_width" name="video_width">
+                  <label for="video_height">Ingrese el alto</label>
+                  <input type="number" id="video_height" name="video_height">  <br><br>
+                <p>Aqui van las entradas que se permiten</p>
+              </form>
+                <button onclick="resizeVideo()">Convertir</button>
+            </div>
+            <div class="actionform">
+              <h2>Cortar video</h2>
+              <form action="#Cut">
+                  <label for="video_cut">Seleccione el video</label>
+                  <input type="file" id="video_cut" name="video_cut">
+                  <label for="start_frame">Frame inicial</label>
+                  <input type="number" id="start_frame" name="start_frame">
+                  <label for="end_frame">Frame final</label>
+                  <input type="number" id="end_frame" name="end_frame">  <br><br>
+                <p>Aqui van las entradas que se permiten</p>
+              </form>
+                <button onclick="trimVideo()">Convertir</button>
+            </div>
+            <div class="actionform">
+              <h2>Extraer Frames de un video</h2>
+              <form action="#Frames">
+                <label for="video_frame">Seleccione el video</label>
+                <input type="file" id="video_frame" name="video_frame"><br><br>
+                <p>Aqui van las entradas que se permiten</p>
+              </form>
+                <button onclick="extractFrames()">Convertir</button>
+            </div>
+        </div>
+        </div>
+      </main>
+  </div>
+</body>
+<script type="text/javascript" src="../static/js/methods.js"></script>
+</html>
